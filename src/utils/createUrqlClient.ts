@@ -1,4 +1,4 @@
-import { createClient, dedupExchange, fetchExchange } from "urql";
+import { dedupExchange, fetchExchange } from "urql";
 import { cacheExchange } from "@urql/exchange-graphcache";
 import {
   LoginMutation,
@@ -7,7 +7,7 @@ import {
   RegisterMutation,
   LogoutMutation,
 } from "../generated/graphql";
-import { betterUpdateQuery } from "../utils/betterUpdateQuery";
+import { betterUpdateQuery } from "./betterUpdateQuery";
 
 export const createUrqlClient = (ssrExchange: any) => ({
   url: "http://localhost:4000/graphql",
